@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  background-color: black;
+  color:white;
+  /* overflow-x: scroll;
+  overflow-y: scroll; */
+}
+
+.mycontent{
+  /* overflow: scroll;
+  overflow-y: visible; */
+}
+
+canvas {
+    position: relative;
+    top: 0;
+    left: 0;
+}
