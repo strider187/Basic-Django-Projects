@@ -13,6 +13,11 @@ from faker import Faker
 fakegen = Faker()
 
 def populate(n = 20):
+    '''
+        This function is used to populate the User model present in the App. It uses the faker library for the task. If faker isn't available, install it using
+        pip install faker
+    '''
+    print("Model fake population have started")
     for turns in range(n):
         print("THE FAKE SCRIPT IN ITS ITERATION:{}",format(turns))
 
@@ -23,8 +28,8 @@ def populate(n = 20):
 
         # populate the User Table
         user = User.objects.get_or_create(first_name = fake_fname, last_name = fake_lname, email = fake_email)[0]
+        print("The {} iteration have finished".format(turns))
 
 if __name__ == '__main__':
-    print("THE POPULTING SCRIPT HAS BEGUN! GETTING SOME USERS IN THERE")
     populate(28)
     print("IT'S DONE!")
